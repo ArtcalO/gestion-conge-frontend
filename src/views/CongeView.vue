@@ -1,5 +1,5 @@
 <template>
-  <router-view/>
+  <h1>Conge page</h1>
 </template>
 
 <script>
