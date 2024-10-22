@@ -1,34 +1,5 @@
 <template>
-	<OverlayView>
-        <div class="form-group">
-                    <label>Id</label>
-                    <input type="text" v-model="id" autofocus required />
-                </div>
-                <div class="form-group">
-                    <label>Nom</label>
-                    <input type="text" v-model="nom" autofocus required />
-                </div>
-                <div class="form-group">
-                    <label>Prenom</label>
-                    <input type="text" v-model="prenom" autofocus required />
-                </div>
-                <div class="form-group">
-                    <label>Age</label>
-                    <input type="text" v-model="age" autofocus required />
-                </div>
-                <div class="form-group">
-                    <label>Genre</label>
-                    <input type="text" v-model="genre" autofocus required />
-                </div>
-                <div>
-                    <input
-                    class="btn btn-primary"
-                    @click="enregistrer"
-                    type="submit"
-                    value="Ajouter"
-                    />
-                </div>
-    </OverlayView>
+	<OverlayView></OverlayView>
 </template>
 
 <script>

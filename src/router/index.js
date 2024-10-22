@@ -1,10 +1,10 @@
 import { createWebHistory, createRouter } from 'vue-router'
-import EmployesView from '@/views/EmployesView.vue'
-import CongeView from '@/views/CongeView.vue'
+import LoginView from  "../views/auth/LoginView.vue"
+import EmployesView from '@/views/employes/EmployesView.vue'
 
 const routes = [
-  {path:"/employes", component:EmployesView},
-  {path:"/conges", component:CongeView}
+  {path:"/login", component:LoginView},
+  {path:"/employes", component:EmployesView}
 ]
 
 const router = createRouter({
