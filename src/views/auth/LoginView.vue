@@ -9,7 +9,7 @@
           <div class="content">
             <div v-if="login">
               <h1 class="title">Se Connecter</h1>
-              <notification />
+              <p style="color: red;" > {{ msg }} </p>
               <div class="form-group">
                 <label for="username">Nom d'utilisateur</label>
                 <input
@@ -57,11 +57,26 @@
         username: "",
         password: "",
         user: [],
+        msg:""
       };
     },
     methods: {
       Login() {
-        alert("Hello")
+        if(this.username.trim()==""){
+          this.msg = "Veuillez specifier votre username"
+          return
+        }
+        if(this.password.trim()==""){
+          this.msg = "Veuillez specifier votre mot de passe"
+          return
+        }
+        
+        if(this.username==this.$store.state.db.username && this.password == this.$store.state.db.password){
+          this.$store.state.user = {"username":this.username, "password":this.password}
+        }else{
+          alert("Identifiants incorrects")
+        }
+
       },
     },
     mounted() {

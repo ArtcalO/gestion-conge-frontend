@@ -99,11 +99,25 @@ export default {
             modal_modifier_conge:false,
             employeObj:{},
             idEmployeObj:{},
-            listeEmployes:this.$store.state.listeEmployes
+            listeEmployes:[]
         }
     },
     components:{
         CreateEmploye
+    },
+    mounted(){
+        var listeEmployes = localStorage.getItem("listeEmployes")
+        if(listeEmployes)
+            this.listeEmployes = JSON.parse(listeEmployes)
+    },
+    watch:{
+        listeEmployes: {
+            handler(newValue) {
+                if(newValue)
+                    localStorage.setItem("listeEmployes", JSON.stringify(newValue));
+            },
+            deep: true
+        }
     },
     methods: {
       modifierEmploye(o) {

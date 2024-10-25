@@ -4,6 +4,11 @@ import { createStore } from 'vuex'
 const store = createStore({
   state () {
     return {
+        user:null,
+        db:{
+          username:"ArtcalO",
+          password:"1234"
+        },
         listeEmployes:[
             {
                 id:1,
@@ -24,6 +29,16 @@ const store = createStore({
                 conge_fin:null
             },
         ],
+        personnelsListe:[
+          {
+            id:2,
+            nom:"TLW",
+            prenom:"Wolverine",
+            age:45,
+            genre:"F",
+          },
+          
+        ]
         
     }
   },
